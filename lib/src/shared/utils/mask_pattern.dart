@@ -1,0 +1,10 @@
+const String maskPatternCpf = "###.###.###-##";
+const String maskPatternBirthDate = "##/##/####";
+const String maskPatternPhone = "(##) #####-####";
+const String maskPatternCreditCard = "#### #### #### ####";
+const String maskPatternCvv = "####";
+const String maskPatternCardExpirationDate = "##/##";
+const String maskPatternNoMask = "";
+const String maskPatternRg = "##.###.###-#";
+const String maskPatternCep = "#####-###";
+const String maskPatternState = "AA";
