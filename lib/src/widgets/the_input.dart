@@ -33,7 +33,7 @@ class TheInput extends StatelessWidget {
     required this.controller,
     this.hintText,
     this.formatter,
-    this.enabled = true,
+    this.enabled,
     this.textInputType = TextInputType.text,
     this.prefixIcon,
     this.sulfixIcon,
@@ -46,7 +46,7 @@ class TheInput extends StatelessWidget {
     this.onChanged,
     this.onFieldSubmitted,
     this.onFocus,
-    this.textStyle,
+    this.textStyle, 
   }) : super(key: key);
 
   static get theTextInputType => null;
@@ -129,7 +129,7 @@ class TheInput extends StatelessWidget {
     this.maxLines,
   ])  : textInputType = TextInputType.name,
         formatter = MaskTextInputFormatter(mask: maskPatternNoMask),
-        prefixIcon = null,
+        prefixIcon = Icon(Icons.person),
         sulfixIcon = null,
         validate = isNotEmpty,
         minLines = 1;
@@ -146,13 +146,14 @@ TheInput.passwordInput(
     this.onFieldSubmitted,
     this.onFocus,
     this.textStyle,
-    this.maxLines,
-  ])  : textInputType = TextInputType.visiblePassword,
+    this.maxLines = 1,
+  ])  : textInputType = TextInputType.text,
         formatter = FilteringTextInputFormatter.singleLineFormatter,
-        prefixIcon = Icon(Icons.password),
+        prefixIcon = Icon(Icons.lock_outline),
         sulfixIcon = null,
         validate = isNotEmpty,
         minLines = 1;
+        
 
   TheInput.numberInput(
     this.hintText,
@@ -211,6 +212,8 @@ TheInput.passwordInput(
             return null;
           }
         },
+        obscureText: this.enabled == true,
+        obscuringCharacter: "*",
         enabled: this.enabled,
         controller: this.controller,
         minLines: this.minLines,
