@@ -32,7 +32,7 @@ class TheOperationInfo extends StatelessWidget {
             color: whiteColor,
           ),
           child: Container(
-            margin: EdgeInsets.all(18),
+            margin: EdgeInsets.all(10),
             child: Column(
               children: [
                 Row(
@@ -40,7 +40,7 @@ class TheOperationInfo extends StatelessWidget {
                     Container(
                       alignment: Alignment.center,
                       child: CircleAvatar(
-                        radius: 45,
+                        radius: 35,
                         backgroundColor: grey,
                         backgroundImage: this.avatar != ''
                             ? CachedNetworkImageProvider("${this.avatar}")
