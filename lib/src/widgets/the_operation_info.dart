@@ -72,7 +72,7 @@ class TheOperationInfo extends StatelessWidget {
                               size: 18,
                             ),
                             TheHorizontalSpace(
-                              space: (MediaQuery.of(context).size.width * 0.30),
+                              space: (MediaQuery.of(context).size.width * 0.20),
                             ),
                             Icon(
                               Icons.monetization_on_outlined,
