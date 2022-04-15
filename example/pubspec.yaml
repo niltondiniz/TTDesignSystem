@@ -58,14 +58,10 @@ flutter:
   fonts:
     - family: Rubik
       fonts:
-        - asset: assets/fonts/Rubik-Regular.ttf
-        - asset: assets/fonts/Rubik-Medium.ttf
-        - asset: assets/fonts/Rubik-SemiBold.ttf
-          style: italic
-
-    - family: Ephesis
-      fonts:
-        - asset: assets/fonts/Ephesis-Regular.ttf        
+        - asset: assets/fonts/Inter-Regular.ttf
+        - asset: assets/fonts/Inter-Medium.ttf
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          style: italic          
 
   # To add assets to your application, add an assets section, like this:
   # assets:
