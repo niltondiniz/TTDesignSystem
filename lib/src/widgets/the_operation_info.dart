@@ -40,7 +40,7 @@ class TheOperationInfo extends StatelessWidget {
                     Container(
                       alignment: Alignment.center,
                       child: CircleAvatar(
-                        radius: 35,
+                        radius: 20,
                         backgroundColor: grey,
                         backgroundImage: this.avatar != ''
                             ? CachedNetworkImageProvider("${this.avatar}")
