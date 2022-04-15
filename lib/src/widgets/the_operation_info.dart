@@ -72,7 +72,7 @@ class TheOperationInfo extends StatelessWidget {
                               size: 18,
                             ),
                             TheHorizontalSpace(
-                              space: (MediaQuery.of(context).size.width * 0.20),
+                              space: (MediaQuery.of(context).size.width * 0.25),
                             ),
                             Icon(
                               Icons.monetization_on_outlined,
@@ -80,10 +80,10 @@ class TheOperationInfo extends StatelessWidget {
                               size: 18,
                             ),
                             SizedBox(
-                              width: 2,
+                              width: 5,
                             ),
                             TheText.h3Regular(
-                              this.moneyQuantity.toStringAsPrecision(2),
+                              this.moneyQuantity.toString(),
                               color: Colors.black,
                             )
                           ],
