@@ -194,6 +194,25 @@ TheInput.passwordInput(
         sulfixIcon = null,
         validate = isEmail,
         minLines = 1;
+  
+  TheInput.operationCode(
+    this.hintText,
+    this.controller, [
+    this.enabled,
+    this.errorText = 'Código do Ativo',
+    this.color,
+    this.onTap,
+    this.onChanged,
+    this.onFieldSubmitted,
+    this.onFocus,
+    this.textStyle,
+    this.maxLines,
+  ])  : textInputType = TextInputType.text,
+        formatter = CurrencyInputFormatter(),
+        prefixIcon = null,
+        sulfixIcon = null,
+        validate = noValidate,
+        minLines = 1;
 
   @override
   Widget build(BuildContext context) {

@@ -27,6 +27,8 @@ class _HomePageState extends State<HomePage> {
             vertical: 30,
           ),
           children: [
+            TheVerticalSpace.space40(),
+            TheOperationInfo(name: 'Bictoin', avatar: 'https://media.istockphoto.com/vectors/blockchain-bitcoin-icon-symbol-vector-stock-vector-vector-id1264729149?k=20&m=1264729149&s=170667a&w=0&h=ZYTNRjZwlIky3ck8ln9JEsGwcNR83gCGLEvt8YyhP-o=', moneyQuantity: 20),
             TheText.h1SemiBold('Inputs'),
             TheVerticalSpace.space40(),
             theForms(_formKey),

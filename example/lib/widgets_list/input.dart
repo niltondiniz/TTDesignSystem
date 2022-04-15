@@ -6,6 +6,7 @@ final TextEditingController? controller2 = TextEditingController();
 final TextEditingController? controller3 = TextEditingController();
 final TextEditingController? controller4 = TextEditingController();
 final TextEditingController? controller5 = TextEditingController();
+final TextEditingController? controller6 = TextEditingController();
 
 Widget theForms(GlobalKey<FormState> _form) {
   return Form(
@@ -22,6 +23,7 @@ Widget theForms(GlobalKey<FormState> _form) {
         TheVerticalSpace.space16(),  
         TheInput.nameInput('First Name', controller5!),
         TheVerticalSpace.space16(),  
+        TheInput.operationCode('Código do Ativo', controller6!),
         TheButton.login(() {
           var form = _form.currentState;
           form!.validate();
