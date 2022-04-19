@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:the_design_system/src/shared/utils/input_formaters/decimal_input_formater.dart';
 import 'package:the_design_system/the_design_system.dart';
 import 'package:the_design_system/src/shared/app_colors.dart';
 import 'package:the_design_system/src/shared/styles/input_styles.dart';
@@ -120,6 +121,26 @@ class TheInput extends StatelessWidget {
         textCapitalization = TextCapitalization.none,
         minLines = 1;
 
+  TheInput.decimalInput(
+    this.hintText,
+    this.controller, [
+    this.enabled,
+    this.errorText = '',
+    this.color,
+    this.onTap,
+    this.onChanged,
+    this.onFieldSubmitted,
+    this.onFocus,
+    this.textStyle,
+    this.maxLines,
+  ])  : textInputType = TextInputType.phone,
+        formatter = DecimalInputFormatter(),
+        prefixIcon = null,
+        sulfixIcon = null,
+        validate = noValidate,
+        textCapitalization = TextCapitalization.none,
+        minLines = 1;
+
   TheInput.nameInput(
     this.hintText,
     this.controller, [
@@ -173,7 +194,7 @@ class TheInput extends StatelessWidget {
     this.textStyle,
     this.maxLines,
   ])  : textInputType = TextInputType.number,
-        formatter = FilteringTextInputFormatter.digitsOnly,
+        formatter = FilteringTextInputFormatter.singleLineFormatter,
         prefixIcon = null,
         sulfixIcon = null,
         validate = isNotEmpty,
