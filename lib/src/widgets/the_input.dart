@@ -136,7 +136,7 @@ class TheInput extends StatelessWidget {
   ])  : textInputType = TextInputType.numberWithOptions(
           decimal: true,
         ),
-        formatter = theFormatter,
+        formatter = FilteringTextInputFormatter.singleLineFormatter,
         prefixIcon = null,
         sulfixIcon = null,
         validate = noValidate,
