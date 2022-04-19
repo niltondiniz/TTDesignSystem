@@ -170,6 +170,27 @@ class TheInput extends StatelessWidget {
         obscureTextEnabled = false,
         minLines = 1;
 
+  TheInput.freeText(
+    this.hintText,
+    this.controller, [
+    this.enabled,
+    this.errorText = '',
+    this.color,
+    this.onTap,
+    this.onChanged,
+    this.onFieldSubmitted,
+    this.onFocus,
+    this.textStyle,
+    this.maxLines,
+  ])  : textInputType = TextInputType.name,
+        formatter = MaskTextInputFormatter(mask: maskPatternNoMask),
+        prefixIcon = Icon(Icons.person),
+        sulfixIcon = null,
+        validate = noValidate,
+        textCapitalization = TextCapitalization.none,
+        obscureTextEnabled = false,
+        minLines = 1;
+
   TheInput.passwordInput(
     this.hintText,
     this.controller, [
