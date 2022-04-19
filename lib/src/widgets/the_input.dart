@@ -29,6 +29,7 @@ class TheInput extends StatelessWidget {
   final bool? onFocus;
   final TextStyle? textStyle;
   final TextCapitalization? textCapitalization;
+  final bool? obscureTextEnabled;
 
   const TheInput({
     Key? key,
@@ -50,6 +51,7 @@ class TheInput extends StatelessWidget {
     this.onFocus,
     this.textStyle,
     this.textCapitalization,
+    this.obscureTextEnabled,
   }) : super(key: key);
 
   static get theTextInputType => null;
@@ -77,6 +79,7 @@ class TheInput extends StatelessWidget {
         sulfixIcon = theSulfixIcon,
         validate = theValidate,
         textCapitalization = TextCapitalization.none,
+        obscureTextEnabled = false,
         minLines = theMinLines;
 
   TheInput.phoneInput(
@@ -99,6 +102,7 @@ class TheInput extends StatelessWidget {
         sulfixIcon = null,
         validate = isPhone,
         textCapitalization = TextCapitalization.none,
+        obscureTextEnabled = false,
         minLines = 1;
 
   TheInput.moneyInput(
@@ -119,6 +123,7 @@ class TheInput extends StatelessWidget {
         sulfixIcon = null,
         validate = noValidate,
         textCapitalization = TextCapitalization.none,
+        obscureTextEnabled = false,
         minLines = 1;
 
   TheInput.decimalInput(
@@ -141,6 +146,7 @@ class TheInput extends StatelessWidget {
         sulfixIcon = null,
         validate = noValidate,
         textCapitalization = TextCapitalization.none,
+        obscureTextEnabled = false,
         minLines = 1;
 
   TheInput.nameInput(
@@ -161,6 +167,7 @@ class TheInput extends StatelessWidget {
         sulfixIcon = null,
         validate = isNotEmpty,
         textCapitalization = TextCapitalization.none,
+        obscureTextEnabled = false,
         minLines = 1;
 
   TheInput.passwordInput(
@@ -181,6 +188,7 @@ class TheInput extends StatelessWidget {
         sulfixIcon = null,
         validate = isNotEmpty,
         textCapitalization = TextCapitalization.none,
+        obscureTextEnabled = true,
         minLines = 1;
 
   TheInput.numberInput(
@@ -201,6 +209,7 @@ class TheInput extends StatelessWidget {
         sulfixIcon = null,
         validate = isNotEmpty,
         textCapitalization = TextCapitalization.none,
+        obscureTextEnabled = false,
         minLines = 1;
 
   TheInput.emailInput(
@@ -223,20 +232,20 @@ class TheInput extends StatelessWidget {
         sulfixIcon = null,
         validate = isEmail,
         textCapitalization = TextCapitalization.none,
+        obscureTextEnabled = false,
         minLines = 1;
 
   TheInput.operationCode(
     this.hintText,
     this.controller, [
     this.enabled,
-    this.errorText = 'Código do Ativo',
+    this.errorText = '',
     this.color,
     this.onTap,
     this.onChanged,
     this.onFieldSubmitted,
     this.onFocus,
     this.textStyle,
-    this.maxLines,
   ])  : textInputType = TextInputType.text,
         formatter = MaskTextInputFormatter(
           mask: maskPatternNoMask,
@@ -245,6 +254,8 @@ class TheInput extends StatelessWidget {
         sulfixIcon = null,
         validate = noValidate,
         minLines = 1,
+        maxLines = 1,
+        obscureTextEnabled = false,
         textCapitalization = TextCapitalization.characters;
 
   @override
@@ -265,7 +276,7 @@ class TheInput extends StatelessWidget {
           }
         },
         textCapitalization: this.textCapitalization!,
-        obscureText: this.enabled == true,
+        obscureText: this.obscureTextEnabled == true,
         obscuringCharacter: "*",
         enabled: this.enabled,
         controller: this.controller,
