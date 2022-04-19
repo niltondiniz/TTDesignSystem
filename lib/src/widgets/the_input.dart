@@ -252,7 +252,7 @@ class TheInput extends StatelessWidget {
         ),
         prefixIcon = null,
         sulfixIcon = null,
-        validate = noValidate,
+        validate = isNotEmpty,
         minLines = 1,
         maxLines = 1,
         obscureTextEnabled = false,
