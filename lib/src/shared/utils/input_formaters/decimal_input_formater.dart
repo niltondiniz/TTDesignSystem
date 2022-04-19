@@ -23,7 +23,8 @@ class DecimalInputFormatter extends TextInputFormatter {
       print(e);
     }
 
-    final formatter = NumberFormat.decimalPattern('pt_Br');
+    final formatter =
+        NumberFormat.decimalPercentPattern(locale: 'pt_Br', decimalDigits: 2);
     //simpleCurrency(locale: "pt_Br", decimalDigits: 2);
 
     String newText = formatter.format(value / 100);

@@ -282,6 +282,7 @@ class TheInput extends StatelessWidget {
           enabledBorder: enabledBorder,
           disabledBorder: enabledBorder,
           focusedBorder: focusedBorder,
+          labelText: this.hintText,
           isDense: true,
           hintText: this.hintText,
           hintStyle: h4RegularStyle,
