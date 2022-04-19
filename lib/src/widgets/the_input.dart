@@ -133,8 +133,10 @@ class TheInput extends StatelessWidget {
     this.onFocus,
     this.textStyle,
     this.maxLines,
-  ])  : textInputType = TextInputType.phone,
-        formatter = DecimalInputFormatter(),
+  ])  : textInputType = TextInputType.numberWithOptions(
+          decimal: true,
+        ),
+        formatter = theFormatter,
         prefixIcon = null,
         sulfixIcon = null,
         validate = noValidate,
