@@ -144,7 +144,7 @@ class TheInput extends StatelessWidget {
         formatter = FilteringTextInputFormatter.singleLineFormatter,
         prefixIcon = null,
         sulfixIcon = null,
-        validate = noValidate,
+        validate = isNotEmpty,
         textCapitalization = TextCapitalization.none,
         obscureTextEnabled = false,
         minLines = 1;
