@@ -184,7 +184,7 @@ class TheInput extends StatelessWidget {
     this.maxLines,
   ])  : textInputType = TextInputType.name,
         formatter = MaskTextInputFormatter(mask: maskPatternNoMask),
-        prefixIcon = Icon(Icons.person),
+        prefixIcon = null,
         sulfixIcon = null,
         validate = noValidate,
         textCapitalization = TextCapitalization.none,
