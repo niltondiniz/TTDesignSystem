@@ -46,7 +46,7 @@ class TheInput extends StatelessWidget {
     this.onChanged,
     this.onFieldSubmitted,
     this.onFocus,
-    this.textStyle, 
+    this.textStyle,
   }) : super(key: key);
 
   static get theTextInputType => null;
@@ -134,8 +134,7 @@ class TheInput extends StatelessWidget {
         validate = isNotEmpty,
         minLines = 1;
 
-
-TheInput.passwordInput(
+  TheInput.passwordInput(
     this.hintText,
     this.controller, [
     this.enabled,
@@ -153,7 +152,6 @@ TheInput.passwordInput(
         sulfixIcon = null,
         validate = isNotEmpty,
         minLines = 1;
-        
 
   TheInput.numberInput(
     this.hintText,
@@ -174,7 +172,7 @@ TheInput.passwordInput(
         validate = isNotEmpty,
         minLines = 1;
 
- TheInput.emailInput(
+  TheInput.emailInput(
     this.hintText,
     this.controller, [
     this.enabled,
@@ -194,7 +192,7 @@ TheInput.passwordInput(
         sulfixIcon = null,
         validate = isEmail,
         minLines = 1;
-  
+
   TheInput.operationCode(
     this.hintText,
     this.controller, [
@@ -208,7 +206,9 @@ TheInput.passwordInput(
     this.textStyle,
     this.maxLines,
   ])  : textInputType = TextInputType.text,
-        formatter = CurrencyInputFormatter(),
+        formatter = MaskTextInputFormatter(
+          mask: maskPatternNoMask,
+        ),
         prefixIcon = null,
         sulfixIcon = null,
         validate = noValidate,
@@ -244,9 +244,7 @@ TheInput.passwordInput(
         autofocus: onFocus ?? false,
         decoration: InputDecoration(
           filled: true,
-          fillColor: this.enabled == false
-              ? grey
-              : whiteColor,
+          fillColor: this.enabled == false ? grey : whiteColor,
           focusedErrorBorder: focusedErrorBorder,
           errorBorder: errorBorder,
           enabledBorder: enabledBorder,
